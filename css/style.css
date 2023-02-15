@@ -1,1 +1,196 @@
+@import url(./default.css);
+
+:root {
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #f5f5fa;
+  --main-font-color: #323264;
+  --main-hover-color: #f0145a;
+  --regular-blue-color: #24a3ff;
+  --secondary-font-color: #b3b3ba;
+  --container-space-narrow: 1.8rem;
+  --container-space-wide: 3.75rem;
+  --container-space: 10rem;
+  --container-width-wide: 1920px;
+  --container-width: 1320px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-space-wide) * 2);
+  padding-left: var(--container-space-wide);
+  padding-right: var(--container-space-wide);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* -------------------------------------------------Header section starts----------------------------------- */
+.nav {
+  margin-top: 3.1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.navigation-contacts {
+  color: var(--secondary-font-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.contact-info-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+.language-options {
+  display: flex;
+  flex-direction: row;
+}
+.language-item {
+  display: flex;
+  flex-direction: row;
+}
+.language-item > .language-picker:last-child {
+  background-color: var(--main-hover-color);
+  color: var(--primary-background-color);
+  border-radius: 8px;
+}
+.language-item > .language-picker:hover:not(:last-child) {
+  background-color: var(--secondary-background-color);
+  border-radius: 8px;
+  transition: all ease 0.5s;
+}
+
+.language-picker {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 14.63px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 5px 7px;
+}
+
+.dot-item {
+  width: 6px;
+  height: 6px;
+  display: flex;
+  align-items: center;
+}
+.contact-number {
+  font-weight: 700;
+}
+.social-link {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18.5px;
+}
+.pages-links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.link-item {
+  font-weight: 700;
+  color: var(--regular-blue-color);
+  text-transform: lowercase;
+  position: relative;
+}
+
+li.link-item > a::after {
+  display: flex;
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: var(--regular-blue-color);
+  transition: ease-in 0.2s;
+}
+li.link-item > a:hover::after {
+  width: 100%;
+}
+.active {
+  color: var(--main-hover-color);
+}
+.link-item.active::after {
+  display: flex;
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  background-color: var(--main-hover-color);
+  transition: ease-in 0.2s;
+}
+/* -------------------------------------------------Header section ends----------------------------------- */
+
+/* -------------------------------------------------Main section starts----------------------------------- */
+.main-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: var(--container-space-wide);
+}
+.title-description {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 42px;
+  width: 1080px;
+}
+.photo-layout {
+  width: 100%;
+  display: grid;
+}
+.photo-item {
+  width: max-content;
+}
+.photo-card {
+  height: 400px;
+
+  border-radius: 12px;
+}
+.photo-description {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.photo-name {
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+.photo-position {
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: var(--secondary-font-color);
+  margin-top: 5px;
+}
+.arrow-item-block {
+  width: 32px;
+  height: 32px;
+  background-color: var(--secondary-background-color);
+	color: var(--secondary-background-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-icon {
+	width: 50%;
+	height: 50%;
+}
+..arrow-icon:hover {
+	fill: var(--main-hover-color)
+}
 
